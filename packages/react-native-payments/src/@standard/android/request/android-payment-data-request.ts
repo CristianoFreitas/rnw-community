@@ -16,6 +16,7 @@ export interface AndroidPaymentDataRequest {
     shippingAddressParameters?: AndroidShippingAddressParameters;
     shippingAddressRequired?: boolean;
     transactionInfo: AndroidTransactionInfo;
+    existingPaymentMethodRequired?: boolean;
 }
 
 export const defaultAndroidPaymentDataRequest: AndroidPaymentDataRequest = {
@@ -23,4 +24,5 @@ export const defaultAndroidPaymentDataRequest: AndroidPaymentDataRequest = {
     apiVersion: 2,
     apiVersionMinor: 0,
     transactionInfo: defaultAndroidTransactionInfo,
+    existingPaymentMethodRequired: false,
 };

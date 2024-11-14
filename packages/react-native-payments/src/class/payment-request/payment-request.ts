@@ -166,6 +166,7 @@ export class PaymentRequest {
     ): AndroidPaymentDataRequest {
         return {
             ...defaultAndroidPaymentDataRequest,
+            existingPaymentMethodRequired: methodData.existingPaymentMethod,
             merchantInfo: {
                 merchantName: details.total.label,
             },

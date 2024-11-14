@@ -9,6 +9,8 @@ interface AndroidGenericPaymentMethodDataInterface extends GenericPaymentMethodD
     allowedAuthMethods?: AndroidAllowedAuthMethodsEnum[];
     // Android environment https://developers.google.com/android/reference/com/google/android/gms/wallet/Wallet.WalletOptions.Builder#setEnvironment(int)
     environment: EnvironmentEnum;
+    // https://developers.google.com/pay/api/android/reference/request-objects#IsReadyToPayRequest
+    existingPaymentMethod?: boolean;
 }
 
 export type AndroidPaymentMethodDataDataInterface = AndroidGenericPaymentMethodDataInterface &
